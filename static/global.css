@@ -1,0 +1,60 @@
+#navlist{
+    height: 10vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: #AAAAFF;
+}
+
+header{
+    font-weight: bold;
+    text-align: center;
+    height: 12vh;
+    color: #EEE;
+    font-size: 8vh;
+    font-family: "Open Sans", sans-serif;
+}
+
+body{
+    margin: 0;
+    background: #444;
+}
+
+p{
+    font-size: 18px;
+    text-align: center;
+    color: #EEE;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.4;
+}
+
+.navitem{
+    font-weight: bold;
+    font-size: 24px;
+    display: inline-block;
+    padding: 12px;
+    border-radius: 1000px;
+    background: #9A9AFF;
+    box-shadow: #7A7ADF 0px 0px 10px;
+    margin-inline: 50px;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: padding 200ms, margin-inline 200ms, font-size 200ms;
+}
+
+.navitem:hover{
+    padding-inline: 50px;
+}
+
+.navitem{
+    color: aliceblue;
+    font-family: "Open Sans", "Roboto Light", sans-serif;
+}
+
+li{
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    color: #EEE;
+    margin-inline: auto;
+}
