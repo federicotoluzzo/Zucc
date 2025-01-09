@@ -9,3 +9,4 @@
 - [ ]  Limitare gli indirizzi email solo al dominio della scuola (dovrebbe essere facile)
 ### Bassa priorità
 - [ ]  Verifica dell'email
+- [ ]  Pagina di supporto con webhook discord
