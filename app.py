@@ -4,13 +4,14 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required
 from werkzeug.security import generate_password_hash, check_password_hash
 app = Flask(__name__)
-with open("config.json") as f:
-    config = json.load(f)
+
+with open("config.json") as f: # Si apre il file json per leggere il contenuto
+    config = json.load(f) # Tutto il contenuto viene salvato in un dizionario
     app.config["SECRET_KEY"] = config["SECRET_KEY"]
     app.config["SQLALCHEMY_DATABASE_URI"] = config["SQLALCHEMY_DATABASE_URI"]
 
 db = SQLAlchemy()
-db.init_app(app)
+db.init_app(app) # si inizializza il database
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True) #la variabile id viene salvata come prima colonna del database (primary_key) è di tipo integer per semplicità
@@ -56,17 +57,17 @@ def load_user(user_id):
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.method == 'POST':
+    if request.method == 'POST': # se viene inviata una richiesta di login
         email = request.form['email']
         password = request.form['password']
         user = User.query.filter_by(email=email).first()
 
-        if user and user.check_password(password):
-            login_user(user)
-            return redirect(url_for('dashboard'))
+        if user and user.check_password(password): # se l'utente esiste e la password è corretta
+            login_user(user) # si fa il login
+            return redirect(url_for('dashboard')) # e lo si passa alla dashboard
 
-        return "Email or password is incorrect"
-    return render_template('login.html')
+        return "Email or password is incorrect" # altrimenti si dice che i dati sono sbagliati
+    return render_template('login.html') # se il tipo di richiesta non è POST, l'utente sta caricando la pagina di login
 
 @app.route('/dashboard')
 @login_required
