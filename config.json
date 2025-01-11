@@ -4,5 +4,9 @@
   "UPLOAD_FOLDER": "uploads",
   "MAX_CONTENT_LENGTH": 67108864,
   "ALLOWED_EXTENSIONS": ["png", "jpg", "jpeg", "pdf", "cpp", "java", "py", "html", "css", "js", "ts"],
-  "WEBHOOK_URL": "https://discord.com/api/webhooks/1326982047830511647/UTjmGC5RaWFbRQuFetP-xDr_Ox8sUhwMYj8h-y4W5IC9-gcXvmKg5vLPdBkBJvoDwUDO"
+  "WEBHOOK_URL": "https://discord.com/api/webhooks/1326982047830511647/UTjmGC5RaWFbRQuFetP-xDr_Ox8sUhwMYj8h-y4W5IC9-gcXvmKg5vLPdBkBJvoDwUDO",
+  "MAIL_SERVER": "smtp.gmail.com",
+  "MAIL_PORT": 587,
+  "MAIL_USERNAME": "verificaindirizzozucc@gmail.com",
+  "MAIL_PASSWORD": "hodsgevjckwpuomm"
 }
